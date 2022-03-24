@@ -2,11 +2,11 @@
 
 ## Introduction
 
-When programming you will be working with a lot of data, and you need to be able to manipulate and organize that data in different ways. One of those ways is using Stacks. Stacks are data structures that work much like a stack of anything in the real world would, where you add something to the top and that top item is then the first to be removed. This is often called "LIFO" (Last In, First Out). Below we will see the various task we can accomplish with stacks when working with lists in Python.
+When programming you will be working with a lot of data, and you need to be able to manipulate and organize that data in different ways. One of those ways is using Stacks. Stacks are data structures that work much like a stack of anything in the real world would, where you add something to the top and that top item is then the first to be removed. This is often called "LIFO" (Last In, First Out). When talking about performance, stacks are expected to take O(1) time when inserting or deleting. Below we will see the various task we can accomplish with stacks when working with lists in Python.
 
 ## Last in First Out
 
-To demonstrate this process the easiest way to understand is to imagine a stack of pancakes. Everytime you finish making another pankcake it goes on top of the stack of pancakes. Then when someone is ready to eat another pancake you will remove the top pancake and put it on thier plate. 
+To demonstrate this process the easiest way to understand is to imagine a stack of pancakes. Everytime you finish making another pankcake it goes on top of the stack of pancakes. Then when someone is ready to eat another pancake you will remove the top pancake and put it on thier plate. To accomplish this in a stack we will use built in python functions such as `push` to add to the stack and `pop` to remove from the stack.
 
 ## Functions Associated with stacks
 
@@ -38,26 +38,7 @@ value = stack.pop()
 if len(stack) == 0:
 ```
 
-## Multiple Conditions
-
-When we allow the software to make decisions, there might be more than one decision that should be made.  Specifying multiple conditions in python uses the `elif` and `else` keywords.  The `elif` keyword means "else if" and represents an additional condition.  The `else` keyword represents all other possible conditions.  Here is a complete example to consider:
-
-```Python
-if temp <= 32.0:
-	print("Watch for ice!")
-elif temp <= 50.0:
-	print("Might want to bring a jacket!")
-elif temp <= 80.0:
-	print("What a beautiful day!")
-else:
-	print("Its warm out there ... look for some shade!")
-```
-
-When this code runs, if will first consider the `temp <= 32.0` condition.  If its True, then it will run the code within the block but then skip all the other conditions.  If the first condition was False, then it will consider the second condition `temp <= 50`.  Notice that in this second condition, we can assume that the temperature is already great than 32.0 because the first condition failed.  If none of the first 3 conditions result in a True (perhaps the temperature is balmy 90 degrees), then the `else` condition will result in True.  Notice that we never put a boolean condition next to the keyword `else`.
-
-Sometimes programmers think they always need to put an `elif` and an `else` when they write an `if` statement.  This is not true.  You should think about all the scenarios you want to check for and use the `elif` and `else` as needed.  If we wrote the same code above  but without `elif` and `else`, we would have to write more complicated boolean expressions.  It is better to use `elif` and `else` to simplify the code and ensure the result we want.
-
-## Example : Geometry Calculator
+## Example : Word Sorting
 
 In the example below, we will write a simple Geometry Calculator.  Before we write the code, we should first think about what we want the software to do.  Writing a list of requirements is an important step in writing software.  The requirements can help us ensure that we using conditionals correctly.  
 
@@ -69,38 +50,26 @@ Geometry Calculator Requirements:
 - Display the results
 
 ```python
-import math
+#This function will take in a string and return all the words that are 5 letters long
+def find_5_letter_words(input):
+    #creates an empty string
+    stack = []
+    #splits each word in string into separate item in list
+    for word in input.split(' '):
+        #adds each word to stack
+        stack.append(word)
+        #removes words depending on length
+        if len(word) < 5:
+            stack.pop()
+        elif len(word) >= 6:
+            stack.pop()
+    #prints remaining words in stack
+    for item in stack:
+        print(item.capitalize())
+    
 
-print("Welcome to the Geometry Calculator")
-print("Please select a shape:")
-print("1) Square")
-print("2) Triangle")
-print("3) Circle")
-choice = int(input("> "))  
-if choice == 1:
-    side = float(input("Side length of the square: "))
-    if side > 0:
-        area = side ** 2
-        print("The area is {}".format(area))
-    else:
-        print("Invalid side length!")
-elif choice == 2:
-    base = float(input("Length of the triangle base: "))
-    height = float(input("Length of the triangle height: "))
-    if base > 0 and height > 0:
-        area = 0.5 * base * height
-        print("The area is {}".format(area))
-    else:
-        print("One of the lengths was invalid!")
-elif choice == 3:
-    radius = float(input("Raidus of the circle: "))
-    if radius > 0:
-        area = math.pi * radius * radius
-        print("The area is {}".format(area))
-    else:
-        print("Invalid radius length!")
-else:
-    print("Invalid Menu Selection")
+random_words = "wow understandable up down dog outstanding hello part very drastic tale so now lisa wonderful bye property world stylishear back we saturn now rate are yelp"        
+find_5_letter_words(random_words)
 ```
 
 Note the use of `elif` to provide conditions for different choices and `else` for the special condition of an invalid choice.  Within each conditional block, different prompts, variables, expressions, and conditionals are used.
