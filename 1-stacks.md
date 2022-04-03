@@ -40,14 +40,6 @@ if len(stack) == 0:
 
 ## Example : Word Sorting
 
-In the example below, we will write a simple Geometry Calculator.  Before we write the code, we should first think about what we want the software to do.  Writing a list of requirements is an important step in writing software.  The requirements can help us ensure that we using conditionals correctly.  
-
-Geometry Calculator Requirements:
-
-- Allow the user to select the shape they want to calculate the area for
-- Ask the user for the size information of the shape they selected
-- Ensure that size lengths are all valid (greater than zero)
-- Display the results
 
 ```python
 #This function will take in a string and return all the words that are 5 letters long
@@ -71,41 +63,5 @@ def find_5_letter_words(input):
 random_words = "wow understandable up down dog outstanding hello part very drastic tale so now lisa wonderful bye property world stylishear back we saturn now rate are yelp"        
 find_5_letter_words(random_words)
 ```
-
-Note the use of `elif` to provide conditions for different choices and `else` for the special condition of an invalid choice.  Within each conditional block, different prompts, variables, expressions, and conditionals are used.
-
-## Problem to Solve : Summer Camp Cost
-
-Write a program that will determine the cost for a child to attend a summer camp based on various factors described below:
-
-The base cost of attending summer camp is determined by the age of the child:
-
-|   Age   |      Cost      |
-| :-----: | :------------: |
-| Under 8 | Can not attend |
-|  8-10   |     $1000      |
-|  11-12  |     $1500      |
-|  13-16  |     $2000      |
-| Over 16 | Can not attend |
-
-The base cost is reduced based on the number of children (of any age) in the family and the family income:
-
-| Family Income        | 1 Child in Family | 2 Children in Family | 3+ Children in Family |
-| -------------------- | ----------------- | -------------------- | --------------------- |
-| Under 25K per Year   | - 70%             | - 80%                | - 90%                 |
-| Under 50K per Year   | - 40%             | - 50%                | - 60%                 |
-| Under 75K per Year   | - 10%             | - 20%                | - 30%                 |
-| 75K or More per Year | No Reduction      | No Reduction         | No Reduction          |
-
-You can test your program with the following scenarios:
-
-- Test 1: 10 year old, 2 children in the family, family income 45K per year will cost: $500 (50% off)
-- Test 2: 14 year old, 3 children in the family, family income 70K per year will cost: $1400 (30% off)
-- Test 3: 12 year old, 1 child in the family, family income 80K per year will cost: $1500 (0% off)
-- Test 4: 18 year old, 3 children in the family, family income 23K per year will cost: N/A - They can't attend
-
-You can check your code with the solution here: [Solution](summer_camp_cost.py)
-
-
 
 [Back to Welcome Page](0-welcome.md)
