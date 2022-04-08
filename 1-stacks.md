@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When programming you will be working with a lot of data, and you need to be able to manipulate and organize that data in different ways. One of those ways is using Stacks. Stacks are data structures that work much like a stack of anything in the real world would, where you add something to the top and that top item is then the first to be removed. This is often called "LIFO" (Last In, First Out). When talking about performance, stacks are expected to take O(1) time when inserting or deleting. Below we will see the various task we can accomplish with stacks when working with lists in Python.
+When programming you will be working with a lot of data, and you need to be able to manipulate and organize that data in different ways. One of those ways is using Stacks. Stacks are data structures that work much like a stack of anything in the real world would, where you add something to the top and that top item is then the first to be removed. This is often called "LIFO" (Last In, First Out). When talking about performance, stacks are expected to take O(1) time when inserting or deleting. Below we will see the various tasks we can accomplish with stacks when working with lists in Python.
 
 ## Last in First Out
 
