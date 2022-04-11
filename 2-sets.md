@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Much like stacks, sets are a very useful way to work with data when programming. Althought, the two data structures have a few key differences. Unlike stacks, sets do not care about order and they do not allow any duplicate data to be entered. One very common example we can use to understand this concept is having a membership at a gym or other service. When you order a membership your name is added to the set and it can easily check to see if you have a membership by checking if your name is in the set. And ultimately if you stop paying for your membership your name is then removed from the set. Sets are expected to take O(1) time when adding, removing, or finding data within a set. Below we will see the various tasks we can accomplish with sets when working with lists in Python.
+Much like stacks, sets are a very useful way to work with data when programming. Although, the two data structures have a few key differences. Unlike stacks, sets do not care about order and they do not allow any duplicate data to be entered. One very common example we can use to understand this concept is having a membership at a gym or other service. When you order a membership your name is added to the set and it can easily check to see if you have a membership by checking if your name is in the set. And ultimately if you stop paying for your membership your name is then removed from the set. Sets are expected to take O(1) time when adding, removing, or finding data within a set. Below we will see the various tasks we can accomplish with sets when working with lists in Python.
 
 ## Sets in Python
 
@@ -26,7 +26,7 @@ You can then use these built in functions to word with sets:
 One of the main uses of sets is the ability to perform mathematical operations with them. One operation is finding which data is found within various sets or the `intersection`.
 
 ```python
-#two different sets and thier data
+#two different sets and their data
 set1 = {1,3,5,6,7}
 set2 = {1,3,4,7,8}
 
@@ -78,17 +78,16 @@ def invite_10(invite, everyone):
             return print(invite)
         #if we dont have 10 yet we add one from the set of everyone
         else:
-            if person not in invite:
-                invite.add(person)
+            invite.add(person)
 
-#the fuction will return a list of people Kevin should invite 
+#the fuction will return a list of people Kevin should invite
 invite_10(invite, everyone) #{'Bob', 'Tim', 'Steph', 'Chris', 'John', 'Jim', 'Josh', 'Juan', 'Rob', 'Dwayne'}
 
 ```
 
 ## Problem to Solve: Company Merger
 
-Two clothing stores have decided to merge to become a new store. Each store has thier own perk members that recieve a weekly email with deals and news. It is your job to combine each stores data and to make sure that no one is recieving multiple emails you will use sets to prevent duplicates. The stores also want to reward anyone that might have a membership with both stores by sending them a special email with bonus deals thanking them for shopping at both establishments previously. 
+Two clothing stores have decided to merge to become a new store. Each store has their own perk members that receive a weekly email with deals and news. It is your job to combine each stores data and to make sure that no one is receiving multiple emails you will use sets to prevent duplicates. The stores also want to reward anyone that might have a membership with both stores by sending them a special email with bonus deals thanking them for shopping at both establishments previously. 
 
 You will need to accomplish this without using the built in python fuctions for intersection and union (using `&` or `|` as seen in the example above).
 
