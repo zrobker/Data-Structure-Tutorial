@@ -10,7 +10,7 @@ def intersection(company1, company2):
     return bonus_email
 
 def union(company1, company2):
-    
+    #this function takes advantage of the fact sets cannont have duplicate data
     for item in company2:
         company1.add(item)
     return company1
