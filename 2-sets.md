@@ -14,7 +14,7 @@ set1 = {1,2,3,4,5}
 #but when you create an empty set you must use code such as this
 empty_set = set()
 ```
-You can then use these methods to word with sets:
+You can then use these built in functions to word with sets:
 
 - `set.add(value)`  : Adds value to set
 - `set.remove(value)` : Removes value from set
@@ -28,65 +28,62 @@ One of the main uses of sets is the ability to perform mathematical operations w
 ```python
 #two different sets and thier data
 set1 = {1,3,5,6,7}
-set1 = {1,3,4,7,8}
+set2 = {1,3,4,7,8}
 
-#
+#there are two ways to find the interestion 
+set3 = intersection(set1,set2)
+set3 = set1 & set2
+
+#each of these if implemented correctly should return this
+{1,3,7}
 ```
 
 ## Union
 
-- `empty()`  : Returns if the stack is empty or not
-- `size()` : Returns the size of the stack
-- `push(value)` : Inserts the value on top of the stack
-- `pop()` : Removes the top value of the stack
-
-
-Here are some examples of each Function in Python:
+Another operation is refered to as `union`. This means to sift through all the data in 2 or more sets and combing it all together without having repeating values. 
 
 ```python
-#Creates empty list
-stack = []
+#two different sets and thier data
+set1 = {1,3,5,6,7}
+set2 = {1,3,4,7,8}
 
-#Push(Value)
-stack.append(1)
-stack.append(2)
-stack.append("a")
-stack.append("b")
+#there are two ways to find the interestion 
+set3 = union(set1,set2)
+set3 = set1 | set2
 
-#Size()
-length = len(stack)
-
-#Pop()
-value = stack.pop()
-
-#Empty()
-if len(stack) == 0:
+#each of these if implemented correctly should return this
+{1,3,4,5,6,7,8}
 ```
 
-## Example : Word Sorting
+## Example : Party Problems
 
+Kevin is going throw a party but can only invite 10 people. He wants to invite everyone but thinks he will have too many people. So he divided his friends into groups to see who would enjoy the party more. He has two groups those who like pizza and those who like star wars. He first want to invite those who like both pizza and star wars then others if he still can. We are going to help him by using sets.
 
 ```python
-#This function will take in a string and return all the words that are 5 letters long
-def find_5_letter_words(input):
-    #creates an empty string
-    stack = []
-    #splits each word in string into separate item in list
-    for word in input.split(' '):
-        #adds each word to stack
-        stack.append(word)
-        #removes words depending on length
-        if len(word) < 5:
-            stack.pop()
-        elif len(word) >= 6:
-            stack.pop()
-    #prints remaining words in stack
-    for item in stack:
-        print(item.capitalize())
-    
+#create and populate sets
+like_pizza = {"Jim","Bob","Jess","Sarah","Zach","Dwayne","Vanessa","Josh","John","Rob","Juan","Chloe","Chris","Tim","Nick"}
+like_star_wars = {"Jim","Chris","Steph","Rob","Tay","Dwayne","Jenifer","Josh","Anne","Tim","Joe","Juan"}
 
-random_words = "wow understandable up down dog outstanding hello part very drastic tale so now lisa wonderful bye property world stylishear back we saturn now rate are yelp"        
-find_5_letter_words(random_words)
+#union of two sets (gives us a list of every friend and no duplicates)
+everyone = like_pizza | like_star_wars
+
+#intersection of two sets (his friends who like both pizza and star wars)
+invite = like_pizza & like_star_wars
+
+#function created to make sure 10 friends are going to be invited
+def invite_10(invite, everyone):
+    for person in everyone:
+        #check length of set to make sure we dont get more than 10 friends
+        if len(invite) >=10:
+            return print(invite)
+        #if we dont have 10 yet we add one from the set of everyone
+        else:
+            if person not in invite:
+                invite.add(person)
+
+#the fuction will return a list of people Kevin should invite 
+invite_10(invite, everyone)
+
 ```
 
 [Back to Welcome Page](0-welcome.md)
