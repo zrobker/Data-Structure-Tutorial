@@ -94,4 +94,5 @@ You will need to accomplish this without using the built in python fuctions for 
 
 
 You can compare your code with the solution here:[Solution](2-solution.py)
+
 [Back to Welcome Page](0-welcome.md)
