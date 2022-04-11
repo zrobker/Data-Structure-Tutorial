@@ -68,7 +68,7 @@ like_star_wars = {"Jim","Chris","Steph","Rob","Tay","Dwayne","Jenifer","Josh","A
 everyone = like_pizza | like_star_wars
 
 #intersection of two sets (his friends who like both pizza and star wars)
-invite = like_pizza & like_star_wars
+invite = like_pizza & like_star_wars #{'Tim', 'Chris', 'Jim', 'Josh', 'Juan', 'Rob', 'Dwayne'}
 
 #function created to make sure 10 friends are going to be invited
 def invite_10(invite, everyone):
@@ -82,8 +82,16 @@ def invite_10(invite, everyone):
                 invite.add(person)
 
 #the fuction will return a list of people Kevin should invite 
-invite_10(invite, everyone)
+invite_10(invite, everyone) #{'Bob', 'Tim', 'Steph', 'Chris', 'John', 'Jim', 'Josh', 'Juan', 'Rob', 'Dwayne'}
 
 ```
 
+## Problem to Solve: Company Merger
+
+Two clothing stores have decided to merge to become a new store. Each store has thier own perk members that recieve a weekly email with deals and news. It is your job to combine each stores data and to make sure that no one is recieving multiple emails you will use sets to prevent duplicates. The stores also want to reward anyone that might have a membership with both stores by sending them a special email with bonus deals thanking them for shopping at both establishments previously. 
+
+You will need to accomplish this without using the built in python fuctions for intersection and union (using `&` or `|` as seen in the example above).
+
+
+You can compare your code with the solution here:[Solution](2-solution.py)
 [Back to Welcome Page](0-welcome.md)
