@@ -59,9 +59,31 @@ def find_5_letter_words(input):
     for item in stack:
         print(item.capitalize())
     
+random_words = "wow understandable up down dog outstanding hello part very drastic tale so now lisa wonderful bye property world stylishear back we saturn now rate are yelp"
 
-random_words = "wow understandable up down dog outstanding hello part very drastic tale so now lisa wonderful bye property world stylishear back we saturn now rate are yelp"        
-find_5_letter_words(random_words)
+find_5_letter_words(random_words) #output "Hello World"
 ```
+
+## Problem to Solve: 
+
+
+
+Use the following code to test your code:
+
+```python
+company1 = {1,9,3,4}
+company2 = {8,9,10}
+print(intersection(company1,company2))  # output {9}
+print(union(company1,company2)) # output {1, 3, 4, 8, 9, 10}
+
+company1 = {"email@gmail.com","email@yahoo.com","email@hotmail.com","email@outlook.com","email@university.com"}
+company2 = {"email@gmail.com","name@yahoo.com","name@hotmail.com","name@outlook.com","email@university.com"}
+print(intersection(company1,company2))  # output {'email@gmail.com', 'email@university.com'}
+print(union(company1,company2)) # output {'name@outlook.com', 'name@hotmail.com', 'name@yahoo.com', 'email@hotmail.com',
+                                #'email@university.com', 'email@yahoo.com', 'email@gmail.com', 'email@outlook.com'}
+```
+
+You can compare your code with the solution here:[Solution](2-solution.py)
+
 
 [Back to Welcome Page](0-welcome.md)
