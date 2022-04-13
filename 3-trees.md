@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Binary Trees 
+Binary Trees are another great way to store and manipulate data. To understand how a binary tree functions we will refer to the image below. 
+
+![Binary Tree](tree.jpeg)
 Unlike stacks, sets do not care about order and they do not allow any duplicate data to be entered. One very common example we can use to understand this concept is having a membership at a gym or other service. When you order a membership your name is added to the set and it can easily check to see if you have a membership by checking if your name is in the set. And ultimately if you stop paying for your membership your name is then removed from the set. Sets are expected to take O(1) time when adding, removing, or finding data within a set. Below we will see the various tasks we can accomplish with sets when working with lists in Python.
 
 ## Sets in Python
