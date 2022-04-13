@@ -3,6 +3,7 @@
 ## Introduction
 
 Binary Trees are another great way to store and manipulate data. To understand how a binary tree functions we will refer to the image below. When using this data structure we can link or connect data together, as seen in the image each piece of data is saved in what we call a `node`. The top node of the tree is called the `root` and the bottom nodes are called `leaves`. A node that has connected nodes below it is also refered to as `parent` and the nodes below a `child` node.
+
 ![Binary Tree](tree.jpg)
 
 ## Binary Search Trees
