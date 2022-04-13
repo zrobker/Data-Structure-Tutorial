@@ -33,7 +33,7 @@ The two main operations we can perform are `inserting` into a BST and `Traversin
 ```python
 #Inserting
 def insert(self, data):
-	
+	#base case
 	if self.root is None:
 		self.root = BST.Node(data)
 	else:

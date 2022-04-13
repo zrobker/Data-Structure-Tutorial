@@ -106,6 +106,6 @@ print(union(company1,company2)) # output {'name@outlook.com', 'name@hotmail.com'
                                 #'email@university.com', 'email@yahoo.com', 'email@gmail.com', 'email@outlook.com'}
 ```
 
-You can compare your code with the solution here:[Solution](2-solution.py)
+You can compare your code with the solution here:[Solution](2.1-solution.py)
 
 [Back to Welcome Page](0-welcome.md)

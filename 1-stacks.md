@@ -64,26 +64,27 @@ random_words = "wow understandable up down dog outstanding hello part very drast
 find_5_letter_words(random_words) #output "Hello World"
 ```
 
-## Problem to Solve: 
+## Problem to Solve: Undo Button
 
-
+You are writing an essay and your undo button is broken, so you decide to make your own using stacks. You will need to create a function that takes two parameters, your sentence and the quantity of undo clicks. But you also need to create a way to make sure the quanitity of undos does not exeed the length of your sentence. If it does just return a "Quantity Error" message.
 
 Use the following code to test your code:
 
 ```python
-company1 = {1,9,3,4}
-company2 = {8,9,10}
-print(intersection(company1,company2))  # output {9}
-print(union(company1,company2)) # output {1, 3, 4, 8, 9, 10}
+sentence = "Larry waved to Susan as he drove off into the distance."
+quantity = 7
+undo_button(sentence,quantity) #['Larry', 'waved', 'to', 'Susan']
 
-company1 = {"email@gmail.com","email@yahoo.com","email@hotmail.com","email@outlook.com","email@university.com"}
-company2 = {"email@gmail.com","name@yahoo.com","name@hotmail.com","name@outlook.com","email@university.com"}
-print(intersection(company1,company2))  # output {'email@gmail.com', 'email@university.com'}
-print(union(company1,company2)) # output {'name@outlook.com', 'name@hotmail.com', 'name@yahoo.com', 'email@hotmail.com',
-                                #'email@university.com', 'email@yahoo.com', 'email@gmail.com', 'email@outlook.com'}
+sentence = "We went to the ball to dance with our friends."
+quantity = 3
+undo_button(sentence,quantity) #['We', 'went', 'to', 'the', 'ball', 'to', 'dance']
+
+sentence = "After she left the party, I went home."
+quantity = 10
+undo_button(sentence,quantity) #Quantity Error
 ```
 
-You can compare your code with the solution here:[Solution](2-solution.py)
+You can compare your code with the solution here:[Solution](1.1-solution.py)
 
 
 [Back to Welcome Page](0-welcome.md)

@@ -1,26 +1,25 @@
-def calculations(input):
+def undo_button(sentence,quantity):
     stack = []
+    
+    for word in sentence.split(' '):
+        stack.append(word)
 
-    for item in input:
-        stack.append(item)
-    if len(stack) >= 10:
-        while len(stack) >= 5:
-            for item in stack:
-                try:
-                    int(item)
-                except ValueError:
-                    last = stack.pop()
-        if last == "." or last == "4" or last == "5" or last == "7":
-            return print(("Error 3"))
-    else:
-        try:
-            int(item)
-        except ValueError:
+    if quantity <= len(stack):
+        while quantity > 0:
             stack.pop()
-    print(stack)
+            quantity -= 1
+        return print(stack)
+    else:
+        return print("Quantity Error")
 
+sentence = "Larry waved to Susan as he drove off into the distance."
+quantity = 7
+undo_button(sentence,quantity) #['Larry', 'waved', 'to', 'Susan']
 
-ex1 = "2`5@[4.71-*&^%44"
-calculations(ex1)
-ex2 = "-----------"
-calculations(ex2)
+sentence = "We went to the ball to dance with our friends."
+quantity = 3
+undo_button(sentence,quantity) #['We', 'went', 'to', 'the', 'ball', 'to', 'dance']
+
+sentence = "After she left the party, I went home."
+quantity = 10
+undo_button(sentence,quantity) #Quantity Error
