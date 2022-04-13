@@ -4,7 +4,7 @@
 
 Binary Trees are another great way to store and manipulate data. To understand how a binary tree functions we will refer to the image below. 
 
-![Binary Tree](tree.jpeg)
+![Binary Tree](tree.jpg)
 
 
 Sets are expected to take O(1) time when adding, removing, or finding data within a set. Below we will see the various tasks we can accomplish with sets when working with lists in Python.
