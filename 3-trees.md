@@ -2,14 +2,18 @@
 
 ## Introduction
 
-Binary Trees are another great way to store and manipulate data. To understand how a binary tree functions we will refer to the image below. 
+Binary Trees are another great way to store and manipulate data. To understand how a binary tree functions we will refer to the image below. When using this data structure we can link or connect data together, as seen in the image each piece of data is saved in what we call a `node`. The top node of the tree is called the `root` and the bottom nodes are called `leaves`. A node that has connected nodes below it is also refered to as `parent` and the nodes below a `child` node.
 
 ![Binary Tree](tree.jpg)
 
+## Binary Search Trees
 
-Sets are expected to take O(1) time when adding, removing, or finding data within a set. Below we will see the various tasks we can accomplish with sets when working with lists in Python.
+Using the same image above we will discuss binary search trees. When placing data into the tree we will compare it to the parent nodes. We will always start at the root node and go left if the data is smaller or right if the data is larger. In the image the root node 8 was placed first then all aditional data was compared one by one and set into place. If we were to place 9 into the BST we would start by comparing it to the root. 9 is greater than 8 so we would then move right and compare 9 and 10. 9 being less would then be placed to the left of 10 and become a leaf and a child to 10. This process can work in O(log n) time when implemented correctly and when the tree is balanced.
 
-## Sets in Python
+## Balanced vs Unbalanced
+
+I
+
 
 When creating sets you will use one of the following:
 
